@@ -1,7 +1,6 @@
 //ALL other ts files should import to here
 //The build script will pull them in to output the main.js file
 
-console.log('main loaded');
 chrome.browserAction.setBadgeBackgroundColor({color: '#313131'});
 chrome.browserAction.setBadgeText({ text: "Al!" });
 
@@ -35,10 +34,7 @@ function getUrls(ticker: string) : string[] {
 }
 
 function setup() : void {
-    console.log('setting up handlers');
     button_ref.addEventListener("click", search);
 }
 
-
 setup();
-
