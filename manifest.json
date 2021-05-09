@@ -1,7 +1,7 @@
 {
-	"name": "Alumalum",
+	"name": "Aluminum",
 	"version": "1.0",
-	"description": "ChromiumExt Quickstart",
+	"description": "A $research shotgun",
 	"manifest_version": 2,
 	"permissions": [
 		"background"

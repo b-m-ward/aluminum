@@ -1,14 +1,14 @@
 {
-  "name": "alumalum",
+  "name": "aluminum",
   "version": "1.0.0",
-  "description": "a chromium ext quickstart",
+  "description": "a $research shotgun",
   "main": "./main/main.js",
   "scripts": {
     "build": "bash build.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Red-Sprite-Labs/Alumalum.git"
+    "url": "git+https://github.com/b-m-ward/aluminum.git"
   },
   "keywords": [
     "quickstart",
@@ -19,9 +19,9 @@
   "author": "bmward",
   "license": "SEE LICENSE IN GITHUB",
   "bugs": {
-    "url": "https://github.com/Red-Sprite-Labs/Alumalum/issues"
+    "url": "https://github.com/b-m-ward/aluminum/issues"
   },
-  "homepage": "https://github.com/Red-Sprite-Labs/Alumalum#readme",
+  "homepage": "https://github.com/b-m-ward/aluminum#readme",
   "dependencies": {
     "@types/chrome": "0.0.137",
     "lessc": "^1.0.2",
