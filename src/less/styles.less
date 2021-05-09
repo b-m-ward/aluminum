@@ -1,0 +1,79 @@
+@main-bg: #313131;
+@sec-bg: #6666;
+@primary-green: lime;
+@slider-height: 10px;
+
+body {
+    width: 300px;
+    height: 75px;
+    background: @main-bg !important;
+}
+
+select {
+    background: @sec-bg;
+    color: @primary-green;
+    border: 0px;
+    margin-left: 5px;
+}
+
+button {
+    height: 20px;
+    width: 20px;
+    outline: none;
+}
+
+.volume-slider {
+    width: 85%;
+
+}
+
+.player-panel {
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.btn {
+    margin-left: 15px;
+    background: @sec-bg;
+    color: @primary-green;
+    border: 0px;
+    transition-duration: 0.7s;
+    &:hover {
+        background: #12750d;
+    }
+}
+
+.support {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color: @primary-green;
+}
+
+a {
+    color: @primary-green;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: @slider-height; /* Specified height */
+    background: @sec-bg; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-top: 10px;
+    &:hover {
+        opacity: 1;
+    };
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: @slider-height; /* Set a specific slider handle width */
+        height: @slider-height; /* Slider handle height */
+        background: @primary-green; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+    }
+}
