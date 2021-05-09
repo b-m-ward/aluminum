@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
       "target": "es5",
-      "module": "commonjs",
       "outDir": "dist",
-      
+      "module": "es6"
     },
     "files": [
       "./src/ts/main.ts",
