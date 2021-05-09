@@ -25,7 +25,11 @@ function getUrls(ticker: string) : string[] {
         `https://finance.yahoo.com/quote/${ticker}`,
         `https://www.nasdaq.com/market-activity/stocks/${ticker}`,
         `https://seekingalpha.com/symbol/${ticker}`,
-        `http://openinsider.com/search?q=${ticker}`
+        `http://openinsider.com/search?q=${ticker}`,
+        `https://www.sec.gov/edgar/search/#/entityName=${ticker}`,
+        `https://stockcharts.com/h-sc/ui?s=${ticker}`,
+        `https://robinhood.com/stocks/${ticker}`,
+        `https://www.moodys.com/search?keyword=${ticker}`
     ];
     return urls;
 }
