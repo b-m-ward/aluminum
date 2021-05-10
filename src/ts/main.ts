@@ -26,22 +26,37 @@ function search() : void {
     }
 }
 
-function getUrls(ticker: string) : SearchSource[] {
-    let urls: SearchSource[] = [
-        { url: `https://finance.yahoo.com/quote/${ticker}`, isSearchable: true, prettyName: 'yahoo finance' },
-        { url: `https://www.nasdaq.com/market-activity/stocks/${ticker}`, isSearchable: true, prettyName: 'nasdaq'},
-        { url: `https://seekingalpha.com/symbol/${ticker}`, isSearchable: true, prettyName: 'seeking alpha'},
-        { url: `http://openinsider.com/search?q=${ticker}`, isSearchable: true, prettyName: 'open insider'},
-        { url: `https://www.sec.gov/edgar/search/#/entityName=${ticker}`, isSearchable: true, prettyName: 'sec EDGAR'},
-        { url: `https://stockcharts.com/h-sc/ui?s=${ticker}`, isSearchable: true, prettyName: 'stockcharts'},
-        { url: `https://robinhood.com/stocks/${ticker}`, isSearchable: true, prettyName: 'robinhood'},
-        { url: `https://www.moodys.com/search?keyword=${ticker}`, isSearchable: true, prettyName: 'moodys' }
-    ];
-    return urls;
+// function getUrls(ticker: string) : SearchSource[] {
+//     let urls: SearchSource[] = [
+//         { url: `https://finance.yahoo.com/quote/${ticker}`, isSearchable: true, prettyName: 'yahoo finance' },
+//         { url: `https://www.nasdaq.com/market-activity/stocks/${ticker}`, isSearchable: true, prettyName: 'nasdaq'},
+//         { url: `https://seekingalpha.com/symbol/${ticker}`, isSearchable: true, prettyName: 'seeking alpha'},
+//         { url: `http://openinsider.com/search?q=${ticker}`, isSearchable: true, prettyName: 'open insider'},
+//         { url: `https://www.sec.gov/edgar/search/#/entityName=${ticker}`, isSearchable: true, prettyName: 'sec EDGAR'},
+//         { url: `https://stockcharts.com/h-sc/ui?s=${ticker}`, isSearchable: true, prettyName: 'stockcharts'},
+//         { url: `https://robinhood.com/stocks/${ticker}`, isSearchable: true, prettyName: 'robinhood'},
+//         { url: `https://www.moodys.com/search?keyword=${ticker}`, isSearchable: true, prettyName: 'moodys' },
+//         { url: `https://www.google.com/search?q=${ticker}`, isSearchable: true, prettyName: 'google wideband' }
+//     ]; 
+//     return urls;
+// }
+
+function createSourceList(): void {
+    let listEl = document.getElementById('source-list');
+    urls.forEach(element => {
+        let child = document.createElement('span');
+        listEl.appendChild(child);
+        child.innerHTML = element.prettyName + "<br/>";
+    });
 }
 
 function setup() : void {
     button_ref.addEventListener("click", search);
+    createSourceList();
+    document.getElementById('ticker').focus();
+    document.addEventListener('keydown', ev => {
+        if(ev.keyCode === 13) search();
+    })
 }
 
 setup();
